@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>ElapsedTime</Title>
+    <Author>Pascal</Author>
+    <Shortcut>et</Shortcut>
+    <Description>Compteur de temps</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>nom</ID>
+        <Default>valeur</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="Csharp">
+      <![CDATA[
+      //Header to Add
+      using System.Diagnostics;
+      
+      string elapsedTime = "";
+      TimeSpan ts;
+      Stopwatch stopWatch = new Stopwatch();
+      stopWatch.Stop();
+      ts = stopWatch.Elapsed;
+      elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10);      
+      ]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>
