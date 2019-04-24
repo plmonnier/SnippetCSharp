@@ -25,6 +25,8 @@
       string elapsedTime = "";
       TimeSpan ts;
       Stopwatch stopWatch = new Stopwatch();
+      stopWatch.Start();
+
       stopWatch.Stop();
       ts = stopWatch.Elapsed;
       elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10);      
